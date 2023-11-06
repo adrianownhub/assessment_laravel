@@ -1,0 +1,65 @@
+/* Styles go here */
+
+.page-header,
+.page-header-space {
+    height: 1%;
+}
+
+.page-footer,
+.page-footer-space {
+    height: 50px;
+}
+
+.page-header {
+    top: 0mm;
+}
+
+.page {
+    page-break-after: always;
+}
+
+.modal-header--sticky {
+     
+    position: sticky;
+    top: 0;
+    background-color: inherit;
+    /* [1] */
+    z-index: 1055;
+    /* [2] */
+}
+
+
+/* Footer fixed to the bottom of the modal */
+
+.modal-footer--sticky {
+      
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    /* [1] */
+    z-index: 1055;
+    /* [2] */
+}
+
+@page {
+    margin: 20mm;
+}
+
+@media print {
+    thead {
+        display: table-header-group;
+    }
+    tfoot {
+        display: table-footer-group;
+    }
+    button {
+        display: none;
+    }
+    body {
+        margin-top: 0;
+    }
+    div.page {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 140%;
+    }
+}
